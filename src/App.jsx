@@ -67,11 +67,13 @@ const App = () => {
       <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
+            {/* LOGO AREA - NAVBAR */}
             <div className="flex items-center gap-2">
-              <div className="bg-green-600 p-2 rounded-lg">
-                <Leaf className="text-white" size={24} />
-              </div>
-              <span className="text-xl font-bold text-green-900 tracking-tight">Verduras Yamada</span>
+              <img 
+                src="/logo_yamada.png" 
+                alt="Verduras Yamada" 
+                className="h-12 w-auto object-contain"
+              />
             </div>
             
             {/* Desktop Menu */}
@@ -415,9 +417,13 @@ const App = () => {
             
             {/* Brand & Mission */}
             <div className="text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
-                <Leaf className="text-green-500" size={28} />
-                <span className="text-2xl font-bold text-white tracking-tight">Verduras Yamada</span>
+              {/* LOGO AREA - FOOTER */}
+              <div className="flex items-center justify-center md:justify-start mb-4">
+                <img 
+                  src="/logo_yamada.png" 
+                  alt="Verduras Yamada" 
+                  className="h-16 w-auto object-contain"
+                />
               </div>
               <p className="text-slate-400 text-sm leading-relaxed mb-6">
                 Qualidade e compromisso com o campo, levando saúde para sua mesa e eficiência para seu negócio.

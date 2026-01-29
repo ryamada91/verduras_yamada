@@ -133,7 +133,7 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight max-w-4xl mx-auto text-balance">
-            Folhas frescas todos os dias para quem  <span className="text-green-600">exige qualidade.</span>
+            Folhas frescas todos os dias para quem <span className="text-green-600">exige qualidade.</span>
           </h1>
           
           <p className="text-lg md:text-2xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed px-2 text-balance">

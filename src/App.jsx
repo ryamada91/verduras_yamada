@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Phone, CheckCircle, Leaf, Truck, Clock, Users, ShoppingBag, Menu, X, ArrowRight, ChevronLeft, ChevronRight, Home, Store, Tractor, DollarSign, MapPin, Mail, Instagram } from 'lucide-react';
 
 const App = () => {
@@ -7,6 +7,29 @@ const App = () => {
 
   const whatsappLink = "https://wa.me/5511989079490";
   
+  // Efeito para injetar os Favicons (Padrão Favicon.io)
+  useEffect(() => {
+    const links = [
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
+      { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' },
+      { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16' },
+      { rel: 'manifest', href: '/site.webmanifest' }
+    ];
+
+    links.forEach(item => {
+      // Verifica se o link já existe para não duplicar
+      let link = document.querySelector(`link[href="${item.href}"]`);
+      if (!link) {
+        link = document.createElement('link');
+        link.rel = item.rel;
+        link.href = item.href;
+        if (item.sizes) link.sizes = item.sizes;
+        if (item.type) link.type = item.type;
+        document.head.appendChild(link);
+      }
+    });
+  }, []);
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
